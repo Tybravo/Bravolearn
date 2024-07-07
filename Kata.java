@@ -69,22 +69,67 @@ public static float isDivision(float firstNum, float secondNum){
 public static int isFactorOf(int factorNum){
 	
 	int toIncrease = 0;
-	int toatlMultiples = 0;
+	int totalMultiples = 0;
 	for(toIncrease = 2; toIncrease <= factorNum; toIncrease++){
 
 	if(factorNum % toIncrease == 0){
-	totalMultiples = totallMultiples + 1;
+	totalMultiples = totalMultiples + 1;
 	}
 	}
 	return totalMultiples;
 	
-      
       }
+
+
+public static boolean isSquare(int squareNum){
+	
+	int toIncrease = 0;
+	for(toIncrease = 1; toIncrease <= squareNum; toIncrease++){
+	if(toIncrease * toIncrease == squareNum) {
+	return true;
+	}
+	}
+	return false;
+    }
+
+/*
+public static boolean isPalindrome(int fiveDigits){
+
+	int countFiveDigits = 5;
+	
+	int lengthOfDigits = String.valueOf(fiveDigits).length();
+
+	if(lengthOfDigits == countFiveDigits){
+	
+	long getFifthNum = fiveDigits % 10;
+	long getFirstNum = fiveDigits / 10000;
+
+	long toGetFourthNum = fiveDigits / 10;
+	long getFourthNum = toGetFourthNum % 10;
+
+	long toGetThirdNum = fiveDigits / 100;
+	long getThirdNum = toGetThirdNum % 10;
+	
+	long toGetSecondNum = fiveDigits / 1000;
+	long getSecondNum = toGetSecondNum % 10;
+	
+	if(getFirstNum == getFifthNum && getSecondNum == getFourthNum){
+	return true;
+	//System.out.println("Yes! The digits you entered is a Palindrome");
+	
+	if(getFirstNum != getFifthNum && getSecondNum != getFourthNum){
+	return false;
+	//System.out.println("Noway! The digits you entered is not a Palindrome");
+	}
+	}
+
+	}
+*/
+
+
 
 
 
 
 
 }
-
-
