@@ -37,6 +37,7 @@ public class MbtiPersonalityTrait{
 			
 
 					System.out.println("SELECT ONLY 'A' OR 'B' TO GET PERSONALITY TRAIT");
+					String personTrait= "";
 					int extroverted = 0;
 					int introverted = 0;
 					int sensing = 0;
@@ -246,7 +247,69 @@ public class MbtiPersonalityTrait{
 							break;
 						}
 
-							if(extroverted > introverted
+							if(introverted > extroverted && intuitive > sensing && thinking > feeling && judging > perspective){
+							personTrait = "INTJ";
+							}
+							if(introverted > extroverted && intuitive > sensing && thinking > feeling && perspective > judging){
+							personTrait = "INTP";
+							}
+							if(extroverted > introverted && intuitive > sensing && thinking > feeling && judging > perspective){
+							personTrait = "ENTJ";
+							}
+							if(extroverted > introverted && intuitive > sensing && thinking > feeling && perspective > judging){
+							personTrait = "ENTP";
+							}
+
+							if(introverted > extroverted && intuitive > sensing && feeling > thinking && judging > perspective){
+							personTrait = "INFJ";
+							}
+							if(introverted > extroverted && intuitive > sensing && feeling > thinking && perspective > judging){
+							personTrait = "INFP";
+							}
+							if(extroverted > introverted  && intuitive > sensing && feeling > thinking && judging > perspective){
+							personTrait = "ENFJ";
+							}
+							if(extroverted > introverted  && intuitive > sensing && feeling > thinking && perspective > judging){
+							personTrait = "ENFJ";
+							}
+
+							if(introverted > extroverted  && sensing > intuitive && thinking > feeling && judging > perspective){
+							personTrait = "ISTJ";
+							}
+							if(introverted > extroverted  && sensing > intuitive && feeling > thinking && judging > perspective){
+							personTrait = "ISFJ";
+							}
+							if(extroverted > introverted  && sensing > intuitive && thinking > feeling && judging > perspective){
+							personTrait = "ESTJ";
+							}
+							if(extroverted > introverted  && sensing > intuitive && feeling > thinking && judging > perspective){
+							personTrait = "ESFJ";
+							}
+
+							if(introverted > extroverted  && sensing > intuitive && thinking > feeling && perspective > judging){
+							personTrait = "ISTP";
+							}
+							if(introverted > extroverted  && sensing > intuitive && feeling > thinking && perspective > judging){
+							personTrait = "ISFP";
+							}
+							if(extroverted > introverted  && sensing > intuitive && thinking > feeling && perspective > judging){
+							personTrait = "ESTP";
+							}
+							if(extroverted > introverted  && sensing > intuitive && feeling > thinking && perspective > judging){
+							personTrait = "ESFP";
+							}
+
+
+
+							
+
+
+
+
+
+
+
+
 /*
 							System.out.printf("The index %d %n",index);
 							System.out.printf("Extrovert %d %n",extroverted);
