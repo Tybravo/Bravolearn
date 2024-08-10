@@ -63,8 +63,7 @@ public class MbtiPersonalityTrait{
 					System.out.println();
 					}
 					}
-					//break;
-
+					
 						switch(index){
 							case 0:
 							if(answer.equals("A") && questionEI[0] == 1){
@@ -245,11 +244,10 @@ public class MbtiPersonalityTrait{
 							perspective = perspective + 1;
 							}
 							break;
-
-
-						
-					
 						}
+
+							if(extroverted > introverted
+/*
 							System.out.printf("The index %d %n",index);
 							System.out.printf("Extrovert %d %n",extroverted);
 							System.out.printf("Introvert %d %n",introverted);
@@ -259,10 +257,12 @@ public class MbtiPersonalityTrait{
 							System.out.printf("Feeling %d %n",feeling);
 							System.out.printf("Judging %d %n",judging);
 							System.out.printf("Perspective %d %n",perspective);
-						
+*/
 			}
 
-     }
 
+
+
+     }
 
 }
