@@ -38,14 +38,14 @@ public class BankApp {
 				String myPin = input.nextLine();
 				long acsNumber = 1000000000L + random.nextLong(900000000L);
 
-		Account myAccount = new Account(firstName, lastName,myPin, 0);
-		bank.addAccount(myAccount);
+		Account account = new Account(firstName, lastName,myPin, 0);
+		bank.addAccount(account);
 
 		System.out.println("Account created successfully!");
 		System.out.printf("First name:%s %n ", firstName);
 		System.out.printf("Last name:%s %n ", lastName);
 		System.out.printf("Account no.:%d %n%n ", acsNumber);
-		inSessionOptionsMethod(bank, myAccount);
+		inSessionOptionsMethod(bank, account);
 		break;
 
 			case "2":
@@ -81,7 +81,7 @@ public class BankApp {
 	}
 
   
-	private static void inSessionOptionsMethod(Bank bank, Account myAccount) {
+	private static void inSessionOptionsMethod(Bank bank, Account account) {
 		Scanner input = new Scanner(System.in);
 		System.out.println("ENTER ANY NUMBER LISTED TO NAVIGATE THE MENU");
 		String selectOption = """
@@ -98,17 +98,17 @@ public class BankApp {
 				case "1":
 					System.out.print("Deposit an amount: ");
 					double depositAmount = input.nextDouble();
-					myAccount.deposit(depositAmount);
-					System.out.printf("Current balance is: $%.2f%n", myAccount.getBalance());
-		inSessionOptionsMethod(bank, myAccount);
+					account.deposit(depositAmount);
+					System.out.printf("Current balance is: $%.2f%n", account.getBalance());
+		inSessionOptionsMethod(bank, account);
                 break;
 
 				case "2":
 					System.out.print("Withdraw an amount: ");
 					double withdrawAmount = input.nextDouble();
-					myAccount.withdraw(withdrawAmount);
-					System.out.printf("Current balance is: $%.2f%n", myAccount.getBalance());
-		inSessionOptionsMethod(bank, myAccount);
+					account.withdraw(withdrawAmount);
+					System.out.printf("Current balance is: $%.2f%n", account.getBalance());
+		inSessionOptionsMethod(bank, account);
                 break;
 
 				case "3":
@@ -120,8 +120,8 @@ public class BankApp {
 					String recipientLastName = input.next();
 
 				case "4":
-					System.out.printf("Your balance is: $%.2f%n", myAccount.getBalance());
-		inSessionOptionsMethod(bank, myAccount);
+					System.out.printf("Your balance is: $%.2f%n", account.getBalance());
+		inSessionOptionsMethod(bank, account);
                 break;
 
 				case "5":
@@ -131,7 +131,7 @@ public class BankApp {
 
 				default:
 					System.out.println("Invalid choice. Please try again.");
-		inSessionOptionsMethod(bank, myAccount);
+		inSessionOptionsMethod(bank, account);
         }
     }
 }
