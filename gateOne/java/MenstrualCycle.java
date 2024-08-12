@@ -12,9 +12,20 @@ public class MenstrualCycle{
 		int lastPeriodDayStarted = scanner.nextInt();
 
 		int dayOfOvulation = (lastPeriodDayStarted + lengthCycle - 14) % 30;
-			if (dayOfOvulation <= 0) {
+			if (dayOfOvulation <= 0){
 			dayOfOvulation += 30;
 			}
+
+		int nextPeriodDayStart = (lastPeriodDayStarted + lengthCycle) % 30;
+			if (nextPeriodDayStart <= 0){
+			nextPeriodDayStart += 30;
+			}
+
+
+			System.out.println("\nYour Cycle Information:");
+			System.out.printf("Your next period start date: Day %d by counting forward %n ", nextPeriodDayStart);
+			System.out.printf("Your ovulation date: Day %d by counting foward %n ", dayOfOvulation);
+			scanner.close();
 
 		}
 
