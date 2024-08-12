@@ -25,7 +25,9 @@ public class MenstrualCycle{
 			System.out.println("\nYour Cycle Information:");
 			System.out.printf("Your next period start date: Day %d by counting forward %n ", nextPeriodDayStart);
 			System.out.printf("Your ovulation date: Day %d by counting foward %n ", dayOfOvulation);
-			scanner.close();
+
+			System.out.println();
+			System.out.println("Take note that the information above may vary for individuals \n as the app ensures that the cycle-day stays within 30 days");
 
 		}
 

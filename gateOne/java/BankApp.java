@@ -130,7 +130,7 @@ public class BankApp {
 		break;
 
 				default:
-					System.out.println("Invalid choice. Please try again.");
+					System.out.println("Invalid selection. Please try again to select valid number.");
 		inSessionOptionsMethod(bank, account);
         }
     }
@@ -181,8 +181,8 @@ class Account {
 		private double balance;
 		private double insufficient;
 
-		public Account() {
-		}
+		//public Account() {
+		//}
 
 	public Account(String firstName, String lastName, String myPin, double balance) {
 		this.firstName = firstName;
@@ -234,4 +234,5 @@ class Account {
         return insufficient;
 	}
 }
+
 
