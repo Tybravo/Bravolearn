@@ -42,7 +42,7 @@ public class BankApp {
 		bank.addAccount(account);
 
 		System.out.println("Account created successfully!");
-		System.out.printf("First name:%s %n ", firstName);
+		System.out.printf(" First name:%s %n ", firstName);
 		System.out.printf("Last name:%s %n ", lastName);
 		System.out.printf("Account no.:%d %n%n ", acsNumber);
 		inSessionOptionsMethod(bank, account);
@@ -97,7 +97,13 @@ public class BankApp {
 			switch (number) {
 				case "1":
 					System.out.print("Deposit an amount: ");
-					double depositAmount = input.nextDouble();
+					double depositAmount = 0;
+					try{
+					depositAmount = input.nextDouble();
+					}catch (Exception e){
+					System.out.print("Invalid input. Please enter a valid number:");
+					input.nextLine();
+					}
 					account.deposit(depositAmount);
 					System.out.printf("Current balance is: $%.2f%n", account.getBalance());
 		inSessionOptionsMethod(bank, account);
@@ -105,19 +111,36 @@ public class BankApp {
 
 				case "2":
 					System.out.print("Withdraw an amount: ");
-					double withdrawAmount = input.nextDouble();
+					double withdrawAmount = 0;
+					try{
+					withdrawAmount = input.nextDouble();
+					}catch (Exception e){
+					System.out.print("Invalid input. Please enter a valid number: ");
+					input.nextLine();
+					}
 					account.withdraw(withdrawAmount);
 					System.out.printf("Current balance is: $%.2f%n", account.getBalance());
 		inSessionOptionsMethod(bank, account);
                 break;
 
-				case "3":
-					System.out.print("Enter the account no. of beneficiary: ");
-					String recipientAccountNumber = input.next();
-					System.out.print("Enter the first name of beneficiary: ");
-					String recipientFirstName = input.next();
-					System.out.print("Enter the last name of the benficiary: ");
-					String recipientLastName = input.next();
+/*
+			   case "3":
+                System.out.print("Enter the first name of the recipient: ");
+                String recipientFirstName = input.next();
+                System.out.print("Enter the last name of the recipient: ");
+                String recipientLastName = input.next();
+
+                Account recipientAccount = bank.findAccountByname(recipientFirstName, recipientLastName);
+                if (recipientAccount != null) {
+                    System.out.print("Enter the amount to transfer: ");
+                    double transferAmount = input.nextDouble();
+                    bank.transferMoney(account, recipientAccount, transferAmount);
+                } else {
+                    System.out.println("Recipient account not found.");
+                }
+                inSessionOptionsMethod(bank, account);
+                break;
+*/
 
 				case "4":
 					System.out.printf("Your balance is: $%.2f%n", account.getBalance());
@@ -169,6 +192,20 @@ class Bank {
 	}
 
 }
+/*
+	public void transferMoney(Account fromAccount, Account toAccount, double amount) {
+		if (fromAccount.getBalance() >= amount) {
+			fromAccount.withdraw(amount);
+			toAccount.deposit(amount);
+			System.out.printf("You have transferred $%.2f from %s %s to %s %s%n",
+			amount, fromAccount.getFirstName(), fromAccount.getLastName(),
+			toAccount.getFirstName(), toAccount.getLastName());
+        } else {
+            System.out.println("Insufficient funds");
+        }
+    }
+}
+*/
 
 
 
@@ -197,11 +234,17 @@ class Account {
 		if (depositAmount > 0.0) {
 		balance = balance + depositAmount;
 		}
+		else if(depositAmount < 0.0) {
+		System.out.println("Wrong input. Your current balance is $" + balance);
+		}
 	}
 
 	public void withdraw(double withdrawAmount) {
-		if (withdrawAmount <= balance) {
+		if (withdrawAmount <= balance && withdrawAmount > 0.0) {
 		balance = balance - withdrawAmount;
+		}
+		else if(withdrawAmount < 0.0) {
+		System.out.println("Wrong input. Your current balance is $" + balance);
 		}
 		else {
 		insufficient = balance;
