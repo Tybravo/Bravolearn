@@ -16,7 +16,7 @@ public class PizzaOrder{
 		int numOfPeople;
 		try{
 		numOfPeople = input.nextInt();
-		}catch(Exception  e){
+		}catch(Exception e){
 		System.out.print("Invalid input. Please enter a valid number: ");
 		input.nextLine();
 		continue;
@@ -34,7 +34,7 @@ public class PizzaOrder{
 		int getNumOfSlicesRemain = 0;
 		int pricePerBox = 0;
 
-		if(pizzaType .equalsIgnoreCase("Odogwu")){
+		if(pizzaType.equalsIgnoreCase("Odogwu")){
 			int odogwuSlizes = 12;
 			int odogwuPrizePerBox = 4200;
 			int numOfBoxes = numOfPeople % odogwuSlizes;
@@ -54,7 +54,7 @@ public class PizzaOrder{
 					}
 
 
-		}else if(pizzaType .equalsIgnoreCase("Big Boys")){
+		}else if(pizzaType.equalsIgnoreCase("Big Boys")){
 			int bigBoysSlizes = 8;
 			int bigBoysPrizePerBox = 3000;
 			int numOfBoxes = numOfPeople % bigBoysSlizes;
@@ -74,7 +74,7 @@ public class PizzaOrder{
 					}
 
 
-		}else if(pizzaType .equalsIgnoreCase("Small Money")){
+		}else if(pizzaType.equalsIgnoreCase("Small Money")){
 			int smallMoneySlizes = 6;
 			int smallMoneyPrizePerBox = 2400;
 			int numOfBoxes = numOfPeople % smallMoneySlizes;
@@ -94,7 +94,7 @@ public class PizzaOrder{
 					}
 
 
-		}else if(pizzaType .equalsIgnoreCase("Sapa Size")){
+		}else if(pizzaType.equalsIgnoreCase("Sapa Size")){
 			int sapaSizeSlizes = 4;
 			int sapaSizePrizePerBox = 2000;
 			int numOfBoxes = numOfPeople % sapaSizeSlizes;
@@ -129,21 +129,6 @@ public class PizzaOrder{
 
 
 
-
-/*
-		if(pizzaType == "Big Boys"){
-			int bigBoysSlizes = 8;
-			int bigBoysPrizePerBox = 3000;
-		}
-		if(pizzaType == "Small Money"){
-			int smallMoneySlizes = 6;
-			int smallMoneyPrizePerBox = 2400;
-		}
-		if(pizzaType == "Sapa Size"){
-			int sapaSizeSlizes = 4;
-			int sapaSizePrizePerBox = 2000;
-		}
-*/
 
 
    }
