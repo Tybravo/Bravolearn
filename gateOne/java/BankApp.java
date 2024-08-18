@@ -100,7 +100,7 @@ public class BankApp {
 					double depositAmount = 0;
 					try{
 					depositAmount = input.nextDouble();
-					}catch (Exception e){
+					}catch (Exception e) {
 					System.out.print("Invalid input. Please enter a valid number:");
 					input.nextLine();
 					}
@@ -123,24 +123,28 @@ public class BankApp {
 		inSessionOptionsMethod(bank, account);
                 break;
 
-/*
-			   case "3":
-                System.out.print("Enter the first name of the recipient: ");
-                String recipientFirstName = input.next();
-                System.out.print("Enter the last name of the recipient: ");
-                String recipientLastName = input.next();
 
-                Account recipientAccount = bank.findAccountByname(recipientFirstName, recipientLastName);
+			   case "3":
+/*
+					System.out.print("Enter the first name of the recipient: ");
+					String recipientFirstName = input.next();
+					System.out.print("Enter the last name of the recipient: ");
+					String recipientLastName = input.next();
+*/
+					System.out.print("Enter account number of the recipient: ");
+					Long recipientAccNum = input.nextLong();
+
+                Account recipientAccount = bank.findAccountByAccNum(recipientAccNum);
                 if (recipientAccount != null) {
-                    System.out.print("Enter the amount to transfer: ");
-                    double transferAmount = input.nextDouble();
-                    bank.transferMoney(account, recipientAccount, transferAmount);
-                } else {
-                    System.out.println("Recipient account not found.");
-                }
+					System.out.print("Enter the amount to transfer: ");
+					double transferAmount = input.nextDouble();
+					bank.transferMoney(account, recipientAccount, transferAmount);
+					} else {
+					System.out.println("Recipient account not found.");
+		}
                 inSessionOptionsMethod(bank, account);
                 break;
-*/
+
 
 				case "4":
 					System.out.printf("Your balance is: $%.2f%n", account.getBalance());
@@ -166,89 +170,92 @@ class Bank {
 	private ArrayList<Account> accounts;
 
 	public Bank() {
-	accounts = new ArrayList<>();
+		accounts = new ArrayList<>();
 	}
 
 	public void addAccount(Account account) {
-	accounts.add(account);
+		accounts.add(account);
 	}
 
-	public Account findAccountByPin(String myPin){
-		for(Account account : accounts){
-			if(account.getMyPin().equals(myPin)){
-		return account;
+	public Account findAccountByPin(String myPin) {
+		for (Account account : accounts) {
+			if (account.getMyPin().equals(myPin)) {
+			return account;
+			}
 		}
+		return null;
 	}
-	return null;
+	
+	public Account findAccountByAccNum(Long accountNum){
+		for(Account account : accounts){
+			if(account.getAccountNum().equals(accountNum) {
+			return account
+			}
+		}
+		return null;
 	}
 
 	public Account findAccountByName(String firstName, String lastName) {
 		for (Account account : accounts) {
-			if (account.getFirstName().equals(firstName) && account.getLastName().equals(lastName)) {
-                return account;
+			if (account.getFirstName().equalsIgnoreCase(firstName) && account.getLastName().equalsIgnoreCase(lastName)) {
+			return account;
+			}
 		}
-	}
-	return null;
+		return null;
 	}
 
-}
-/*
 	public void transferMoney(Account fromAccount, Account toAccount, double amount) {
 		if (fromAccount.getBalance() >= amount) {
 			fromAccount.withdraw(amount);
 			toAccount.deposit(amount);
-			System.out.printf("You have transferred $%.2f from %s %s to %s %s%n",
-			amount, fromAccount.getFirstName(), fromAccount.getLastName(),
-			toAccount.getFirstName(), toAccount.getLastName());
-        } else {
-            System.out.println("Insufficient funds");
-        }
-    }
-}
-*/
+		System.out.printf("You have transferred $%.2f from %s %s to %s %s%n",
+		amount, fromAccount.getFirstName(), fromAccount.getLastName(), toAccount.getFirstName(), toAccount.getLastName());
+		} else {
+		System.out.println("Insufficient funds");
+		}
+	    }
+	}
 
 
 
 
 class Account {
-		private String firstName;
-		private String lastName;
-		private String myPin;
-		private Long accountNum;
-		private double balance;
-		private double insufficient;
+	private String firstName;
+	private String lastName;
+	private String myPin;
+	private Long accountNum;
+	private double balance;
+	private double insufficient;
 
-		//public Account() {
-		//}
+	public Account() {
+	}
 
-	public Account(String firstName, String lastName, String myPin, double balance) {
+	public Account(String firstName, String lastName, String myPin, Long accountNum, double balance) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.myPin = myPin;
-		if (balance > 0.0) {
-		this.balance = balance;
+		this.accountNum = accountNum;
+			if (balance > 0.0) {
+			this.balance = balance;
 		}
 	}
 
 	public void deposit(double depositAmount) {
 		if (depositAmount > 0.0) {
-		balance = balance + depositAmount;
-		}
-		else if(depositAmount < 0.0) {
-		System.out.println("Wrong input. Your current balance is $" + balance);
+			balance += depositAmount;
+		} else if (depositAmount < 0.0) {
+			System.out.println("Wrong input. Your current balance is $" + balance);
 		}
 	}
 
 	public void withdraw(double withdrawAmount) {
 		if (withdrawAmount <= balance && withdrawAmount > 0.0) {
-		balance = balance - withdrawAmount;
-		}
-		else if(withdrawAmount < 0.0) {
-		System.out.println("Wrong input. Your current balance is $" + balance);
-		}
-		else {
+			balance -= withdrawAmount;
+		} else if (withdrawAmount < 0.0) {
+			System.out.println("Wrong input. Your current balance is $" + balance);
+		} else {
 		insufficient = balance;
-		System.out.println("Insufficient funds. Your current balance is $" + balance);
+			System.out.println("Insufficient funds. Your current balance is $" + balance);
 		}
 	}
 
@@ -258,24 +265,29 @@ class Account {
 	}
 
 	public String getFirstName() {
-        return firstName;
+		return firstName;
 	}
 
 	public String getLastName() {
-        return lastName;
+		return lastName;
 	}
 
 	public double getBalance() {
-        return balance;
+		return balance;
 	}
 
 	public String getMyPin() {
-        return myPin;
+		return myPin;
+	}
+
+	public Long getAccountNum() {
+		return accountNum;
 	}
 
 	public double getInsufficient() {
         return insufficient;
 	}
+
 }
 
 
