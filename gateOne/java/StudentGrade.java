@@ -57,7 +57,7 @@ public class StudentGrade{
 					scores = input.nextInt();
 					}
 
-					if(index == 0 && count == 0){
+ 					if(index == 0 && count == 0){
 					student1 = index + 1;
 					scoresForStudent1[0] = scores;
 					}

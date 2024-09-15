@@ -10,7 +10,7 @@ public class AccountTest {
     public Account account;
     @BeforeEach
     public void getStartedWithThis() {
-        account = new Account("correctPin", "accountNum");
+        account = new Account("", "", "correctPin");
     }
 
     @Test
@@ -27,7 +27,7 @@ public class AccountTest {
     }
 
     @Test
-    public void withdraw1k_BalanceIs4kTest() {
+    public void withdraw1k_BalanceIs3kTest() {
         account.deposit(4_000);
         assertEquals(4_000, account.getBalance("correctPin"));
         account.withdraw(1_000);
@@ -44,7 +44,7 @@ public class AccountTest {
     }
 
     @Test
-    public void depositNegative3k_CannotDeppositBalanceIs7kTest() {
+    public void depositNegative3k_CannotDeposit_BalanceIs7kTest() {
         assertEquals(0, account.getBalance("correctPin"));
         account.deposit(7_000);
         assertEquals(7_000, account.getBalance("correctPin"));
@@ -59,6 +59,6 @@ public class AccountTest {
         assertEquals(2000, account.getBalance("correctPin"));
         account.updatePin("correctPin", "newPin");
         assertEquals(2000, account.getBalance("newPin"));
-        //assertThrows(IllegalArgumentException.class, ()-> account.getBalance("correctPin"));
+
     }
 }
