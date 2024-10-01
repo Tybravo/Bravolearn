@@ -1,17 +1,14 @@
 package bank;
 
-import static bank.GeoPolitical.NORTH_WEST;
-import static bank.GeoPolitical.NORTH_EAST;
-
 public class States {
-    GeoPolitical geoPolitical;
+    GeoZones geoZones;
 
-    public States(GeoPolitical geoPolitical) {
-        this.geoPolitical = geoPolitical;
+    public States(GeoZones geoZones) {
+        this.geoZones = geoZones;
     }
 
     public void getState(){
-        switch (geoPolitical){
+        switch (geoZones){
             case NORTH_EAST:
                 System.out.println("BORNU");
                 System.out.println("YOBE");

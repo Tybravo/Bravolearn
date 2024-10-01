@@ -6,12 +6,12 @@ import java.util.Scanner;
 
 public class GeopoliticalZones {
     static Scanner input = new Scanner(System.in);
-    private static Zones zones;
+    private static GeoZones zones;
 
     public static void showMAinMenu() {
         String menu = """
                  Select your choice
-                 1 => Geopolitical Zones
+                 1 => Geopolitical GeoZones
                  2 => Exit
                 """;
         print(menu);
@@ -37,7 +37,7 @@ public class GeopoliticalZones {
     public static void geopoliticalZone(char choice) {
         print("Enter state: ");
         String state = input.next().replaceAll("[-_,@# ']", "");
-        zones = Zones.getZoneName(state);
+        zones = GeoZones.getZoneName(state);
         print("This state is a part of the " + zones.toString() + " zone");
         showMAinMenu();
     }
@@ -61,7 +61,7 @@ public class GeopoliticalZones {
 
 import java.util.Arrays;
 
-public enum Zones {
+public enum GeoZones {
     NORTH_CENTRAL("Benue", "Niger", "Kogi", "Kwara", "Plateau", "Nassarawa", "FCT"),
     NORTH_EAST("Gombe", "Bauchi", "Yobe", "Benue", "Adamawa", "Taraba"),
     SOUTH_EAST("Abia", "Imo", "Ebonyi", "Anambra", "Enugu"),
@@ -72,7 +72,7 @@ public enum Zones {
     private final String [] states;
 
 
-    Zones(String... states) {
+    GeoZones(String... states) {
         this.states = states;
 
     }
@@ -81,17 +81,17 @@ public enum Zones {
         return states;
     }
 
-    public Zones getZone(String state) {
-        return Zones.values()[ordinal()];
+    public GeoZones getZone(String state) {
+        return GeoZones.values()[ordinal()];
     }
 
     public String[] toString(String states) {
-        return Zones.valueOf(states).getStates();
+        return GeoZones.valueOf(states).getStates();
     }
 
-    public static Zones getZoneName(String states) {
-        Zones value = null;
-        for (Zones zone : Zones.values()) {
+    public static GeoZones getZoneName(String states) {
+        GeoZones value = null;
+        for (GeoZones zone : GeoZones.values()) {
             if(Arrays.asList(zone.getStates()).contains(states)) {
                 value = zone;
                 break;
