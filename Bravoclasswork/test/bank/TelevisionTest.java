@@ -39,5 +39,26 @@ public class TelevisionTest {
         assertFalse(volume > 0);
     }
 
+    @Test
+    public void test_That_Volume_Can_Be_Increased() {
+        tv.turnOn();
+        tv.set_volume(2);
+        tv.increase_volume();
+        tv.increase_volume();
+        int volume = tv.increase_volume();
+        assertEquals(5, volume);
+    }
+
+    @Test
+    public void test_That_Volume_Can_Be_Decreased() {
+        tv.turnOn();
+        tv.set_volume(7);
+        tv.decrease_volume();
+        tv.decrease_volume();
+        int volume = tv.increase_volume();
+        assertEquals(3, volume);
+
+    }
+
 }
 

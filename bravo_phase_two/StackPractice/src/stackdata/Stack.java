@@ -1,32 +1,42 @@
 package stackdata;
 
 public class Stack {
-    private boolean isEmpty = true;
-    private int capacity;
+    private final int capacity;
     private int size;
-    private String s;
+    private final String[] strElements;
 
     public Stack(int capacity) {
         this.capacity = capacity;
         this.size = 0;
-        this.s = s;
+        this.strElements = new String[capacity];
+    }
+
+    public int getSize() {
+        return size;
     }
 
     public boolean isEmpty() {
-        return isEmpty;
+        return true;
     }
 
-    public int push(int size, String s) {
-        this.s = s;
-        this.size++;
-      //isEmpty= true;
-        return size;
+    public void push(String s) {
+        if (size < capacity) {
+            strElements[size] = s;
+            size++;
+        } else {
+            System.out.println("Stack is full");
+        }
     }
 
-    public int pop(int size) {
-        this.size--;
-        //isEmpty= false;
-        return size;
+    public void pop() {
+        if (size > 0) {
+            strElements[size - 1] = null;
+            size--;
+        } else {
+            System.out.println("Stack is empty");
+        }
     }
+
 }
+
 
