@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3427bea5-1dc3-4592-a8e6-85b678bb60d1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../bavo_phase_two/BankApp/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bavo_phase_two/BankApp/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bavo_phase_two/BankApp/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bavo_phase_two/BankApp/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bavo_phase_two/BankApp/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bavo_phase_two/BankApp/BankApp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bavo_phase_two/BankApp/lib/apiguardian-api-1.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bavo_phase_two/BankApp/lib/junit-jupiter-5.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bavo_phase_two/BankApp/lib/junit-jupiter-api-5.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bavo_phase_two/BankApp/lib/junit-jupiter-engine-5.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bavo_phase_two/BankApp/lib/junit-jupiter-params-5.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bavo_phase_two/BankApp/lib/junit-platform-commons-1.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bavo_phase_two/BankApp/lib/junit-platform-engine-1.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bavo_phase_two/BankApp/lib/opentest4j-1.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bavo_phase_two/BankApp/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bavo_phase_two/BankApp/src/bank/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bavo_phase_two/BankApp/src/bank/Bank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bavo_phase_two/BankApp/test/bank/AccountTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bavo_phase_two/BankApp/test/bank/BankTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../function_practice_01/CreateFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../function_practice_01/CreateFunction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../function_practice_01/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../function_practice_01/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gateOne/java/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../gateOne/java/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gateOne/java/Bank.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../gateOne/java/Bank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gateOne/java/BankApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../gateOne/java/BankApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gateOne/java/MbtiPersonalityTrait.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../gateOne/java/MbtiPersonalityTrait.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gateOne/java/MenstrualCycle.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../gateOne/java/MenstrualCycle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gateOne/java/MenstrualCycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../gateOne/java/MenstrualCycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gateOne/java/StudentGrade.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../gateOne/java/StudentGrade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gateOne/java/StudentGrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../gateOne/java/StudentGrade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gateOne/python/mentrualcycle.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../gateOne/python/mentrualcycle.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Tybravo"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Tybravo/Bravochibuzy.git",
+    "accountId": "abed2724-2be7-4d95-a570-8671a11f823d"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2lyNvJNss1IHNPsJnUWCbd4fUKx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "true",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/DELL USER/Documents/Semic Java/Bravolearn/bravo_phase_two/JavaFunds",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="JavaMoney" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.387" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.387" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3427bea5-1dc3-4592-a8e6-85b678bb60d1" name="Changes" comment="" />
+      <created>1726148585483</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726148585483</updated>
+      <workItem from="1726148586593" duration="5834000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

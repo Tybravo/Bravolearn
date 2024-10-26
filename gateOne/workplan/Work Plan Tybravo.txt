@@ -1,0 +1,32 @@
+- Stated below are my work plan (September).
+
+* MONDAY(9) - SATURDAY((14)
+- Task to start and complete  -> Student Grade
+- To be delivered in Python and Java
+
+* MONDAY(16) - SATURDAY((21)
+- Task to start and complete -> Credit Card Validator
+- To be delivered in Python and Java
+
+* MONDAY(23) - SATURDAY((28)
+- Task to start and complete -> Check out
+- To be delivered in Python and Java
+
+
+I was unable to lay my hands mostly on these tasks during my phase gate one due to illness.
+As I will be working on them, should there be any challenge I encounter, I will let you know.
+Thank you sir.
+
+
+These are the added Exercises from Deitel as requested.
+Chapter 2
+Exercises 2.11, 2.12, 2.13, 2.14, 2.15 Monday(9)  - Saturday(21)
+Chapter 3
+Exercises 3.9, 3.11, 3.16, 3.21, 3.22, 3.23 Monday(23)  - Saturday(5)
+Chapter 4
+Exercises 4.4, 4.5, 4.9, 4.10, 4.13, 4.14, 4.15, 4.16, 4.17, 4.18, Monday(7)  - Saturday(21)
+Chapter 5
+Exercise 5.4, 5.5, 5.6, 5.9, 5.11, 5.15, 5.16,  5.19, Monday(23)  - Saturday(5)
+
+
+
